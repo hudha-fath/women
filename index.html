@@ -1,18 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Women Legal Rights Chatbot</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h2>Women Legal Rights Awareness Chatbot</h2>
-  <div id="chatbox"></div>
-  <input id="input" type="text" placeholder="Ask about your rights...">
-  <button onclick="sendMessage()">Send</button>
-  <br><br>
-  <a href="tel:1091" class="emergency-btn">Emergency Helpline (1091)</a>
 
-  <script src="chatbot.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Legal Help Chatbot - India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="landing-page">
+        <div class="landing-content">
+            <h1 class="landing-title" id="landing-title">SHE Assist</h1>
+            <p class="landing-subtitle" id="landing-subtitle">Women’s Legal Support</p>
+            <div class="lang-selection">
+                <p class="landing-caption" id="landing-caption">Select Your Language / ഭാഷ തിരഞ്ഞെടുക്കുക</p>
+                <div class="button-group">
+                    <button id="lang-en-btn" class="start-btn lang-btn">English</button>
+                    <button id="lang-ml-btn" class="start-btn lang-btn">മലയാളം</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Chat App (Initially Hidden) -->
+    <div class="app-container" id="app-container" style="display: none;">
+        <header>
+            <div class="header-content">
+                <h1 id="header-title">SHE Assist</h1>
+                <button id="rights-btn" class="rights-btn">Know Your Rights</button>
+                <button id="history-btn" class="rights-btn history-btn">History</button>
+                <button id="new-chat-btn" class="rights-btn new-chat-btn">New Chat</button>
+                <button id="quick-exit-btn" class="rights-btn quick-exit-btn">Quick Exit</button>
+            </div>
+            <p class="subtitle" id="header-subtitle">Confidential & Private. Providing legal awareness, not advice.</p>
+        </header>
+
+        <main class="chat-window" id="chat-window">
+            <!-- Messages will appear here -->
+        </main>
+
+        <!-- Legal Rights Modal -->
+        <div id="legal-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Know Your Rights - Legal Guide</h2>
+                    <span class="close-btn">&times;</span>
+                </div>
+                <div class="modal-body" id="legal-guide-body">
+                    <!-- Content will be injected by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- History Modal -->
+        <div id="history-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="history-title">Chat History</h2>
+                    <span class="close-history-btn">&times;</span>
+                </div>
+                <div class="modal-body" id="history-list">
+                    <!-- History items will be injected by JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your concern here..."
+                    aria-label="Type your concern">
+                <button id="send-btn" aria-label="Send">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

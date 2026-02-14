@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; background: #f9f9f9; }
+#chatbox { width: 400px; height: 500px; border: 1px solid #ccc; padding: 10px; overflow-y: scroll; background: #fff; }
+.user { color: blue; margin: 5px 0; }
+.bot { color: green; margin: 5px 0; }
+#input { width: 300px; }
+.emergency-btn { background: red; color: white; padding: 10px; text-decoration: none; }
